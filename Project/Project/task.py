@@ -33,10 +33,10 @@ def bear():
           "do you fight it or go back to safety?")
     user = input("What do you choose [fight] or [safety]?")
     if user == "fight":
-        print("The bear wakes up it doesn't end well.")
+        print("The bear wakes up. It doesn't end well.")
         die()
     elif user == "safety":
-        print("good choice that bear looked pretty scary")
+        print("Good choice that bear looked pretty scary.")
         start()
 
 

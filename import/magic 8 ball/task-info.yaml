@@ -6,6 +6,9 @@ files:
   - offset: 0
     length: 13
     placeholder_text: '# TODO'
+  - offset: 114
+    length: 18
+    placeholder_text: '# TODO'
 - name: tests/test_task.py
   visible: false
 - name: __init__.py
