@@ -5,19 +5,19 @@ files:
   placeholders:
   - offset: 0
     length: 13
-    placeholder_text: '# TODO'
+    placeholder_text: '# TODO1'
   - offset: 26
     length: 20
-    placeholder_text: '# TODO'
+    placeholder_text: '# TODO2'
   - offset: 148
     length: 14
-    placeholder_text: '# TODO'
+    placeholder_text: '# TODO3'
   - offset: 167
     length: 18
-    placeholder_text: '# TODO'
+    placeholder_text: '# TODO4'
   - offset: 190
     length: 29
-    placeholder_text: '# TODO'
+    placeholder_text: '# TODO5'
 - name: tests/test_task.py
   visible: false
 - name: __init__.py
