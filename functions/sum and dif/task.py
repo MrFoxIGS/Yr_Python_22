@@ -14,5 +14,5 @@ def dif(a, b):
     """Finds the difference of two numbers"""
     return a - b
 
-greet2("Catherine")
+greet2("Frodo")
 print(sum(5,10))

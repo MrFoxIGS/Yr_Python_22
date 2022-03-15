@@ -1,10 +1,6 @@
 import sys
 
 
-# Write a function for each scene
-# Use paper to map out how your game will play before
-# you begin
-
 def die():
     """Death scene, uses sys.exit to end the program
     can reuse this multiple times"""
@@ -12,40 +8,42 @@ def die():
     sys.exit()
 
 
-def start():
-    """First scene calls itself with the else to deal with
-     unexpected input"""
-    print("You are in a dark cave there are passages "
-          "that go to the left and right")
-    user = input("Which way do you go [left] or [right]?")
-    if user == "left":
-        win()
-    elif user == "right":
-        bear()
-    else:
-        print("Not a valid choice")
-        start()
+def scene1():
+    """Scene 1"""
+    print("You are somewhere")
+    print("You can make a good choice or a bad choice")
+    choice = input("Do you make the [good] choice or the [bad] choice?")
 
+    if choice == "good":
+        print("That was a good choice. You keep walking")
+        scene2()
 
-def bear():
-    """Bear scene don't fight the bear"""
-    print("There is an angry bear sleeping on a pile of gold"
-          "do you fight it or go back to safety?")
-    user = input("What do you choose [fight] or [safety]?")
-    if user == "fight":
-        print("The bear wakes up. It doesn't end well.")
+    elif choice == "bad":
+        print("That was a bad choice. You get eaten by a bear.")
         die()
-    elif user == "safety":
-        print("Good choice that bear looked pretty scary.")
-        start()
+
+    else:
+        print("Please choose [good] or [bad]")
+        scene1()
 
 
-def win():
-    """Winning scene uses sys.exit() to end the program"""
-    print("You escaped from the cave well done")
-    sys.exit()
+def scene2():
+    """Scene 2"""
+    print("Welcome to scene 2")
+    choice = input("Do you make the [good] choice or the [bad] choice?")
+
+    if choice == "good":
+        print("That was a good choice")
+        scene3()
+
+    elif choice == "bad":
+        print("That was a bad choice")
+        die()
+
+    else:
+        print("Please choose [good] or [bad]")
+        scene1()
 
 
-# Run the program by calling the first scene start()
-
-start()
+# Call scene1() to run the game
+scene1()
